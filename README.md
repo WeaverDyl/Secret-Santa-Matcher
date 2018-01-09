@@ -1,6 +1,7 @@
 # SECRET-SANTA-MATCHER
 
-##SETUP
+## SETUP
+
 **IMPORTANT**: To use this program, you must have a funded [Twilio](https://www.twilio.com/) account. This should cost less than $1.25 to run ($1 for a phone number and $0.0075 per SMS).
 
 #### Dependencies
