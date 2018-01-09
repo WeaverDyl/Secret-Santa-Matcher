@@ -5,8 +5,6 @@
 **IMPORTANT**: To use this program, you must have a funded [Twilio](https://www.twilio.com/) account. This should cost less than $1.25 to run ($1 for a phone number and $0.0075 per SMS).
 
 #### Dependencies
-Included are the required dependencies, but they may be out of date when you use this, so I recommend you set this up yourself.
-
 This program uses the [JSON-simple](https://code.google.com/archive/p/json-simple/) toolkit as well as the [Twilio Java API](https://www.twilio.com/docs/libraries/java). Follow the instructions there to get everything running.
 
 #### Configuration File
