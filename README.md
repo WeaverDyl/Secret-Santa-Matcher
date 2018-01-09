@@ -4,6 +4,8 @@
 
 **IMPORTANT**: To use this program, you must have a funded [Twilio](https://www.twilio.com/) account. This should cost less than $1.25 to run ($1 for a phone number and $0.0075 per SMS).
 
+Add your Twilio phone number to line 40 of `SendMessage.java` where it says `new PhoneNumber("ADD YOUR PHONE NUMBER HERE")`
+
 #### Dependencies
 This program uses the [JSON-simple](https://code.google.com/archive/p/json-simple/) toolkit as well as the [Twilio Java API](https://www.twilio.com/docs/libraries/java). Follow the instructions there to get everything running.
 
