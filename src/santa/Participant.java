@@ -2,7 +2,6 @@ package santa;
 
 /**
  * Represents a single participant, who has a name and a phone number.
- * They
  * 
  * @author Dylan Weaver
  *
