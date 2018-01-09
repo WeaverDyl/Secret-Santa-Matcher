@@ -37,7 +37,7 @@ public class SendMessage {
 	    	// Send messages if devMode is false
 	    	if (!devMode) {
 			    Message message = Message.creator(new PhoneNumber(p.getSantaNumber()),
-			            new PhoneNumber("+12402153734"), "Hello " + p.getSantaName()
+			            new PhoneNumber("ADD YOUR TWILIO PHONE NUMBER HERE"), "Hello " + p.getSantaName()
 			            + "! You are the secret santa for: " + p.getRecipientName() 
 			            + ". Their phone number is: " 
 			            + p.getRecipientNumber()).create();
