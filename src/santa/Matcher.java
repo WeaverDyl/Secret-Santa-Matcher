@@ -122,13 +122,13 @@ public class Matcher {
 	}
 	
 	/**
-	 * Checks if there are two equivalent elements in the list of pairs.
+	 * Checks if there are two equivalent elements in the list of participants.
 	 * 
 	 * Aside: This could probably be made obselete if I instead wrote
 	 * the pairs list as a set instead of an arraylist. I realized this
 	 * after I finished, and will hopefully implement it properly soon.
 	 * 
-	 * @param pairs The current list of santa/recipient pairings
+	 * @param pairs The current list of participants
 	 * @return True if there is more than one element with 2+ occurrences,
 	 * 		   false otherwise.
 	 */

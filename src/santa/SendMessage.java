@@ -17,11 +17,11 @@ import com.twilio.type.PhoneNumber;
 public class SendMessage {
   // Enabling dev mode will not send messages, but instead print out expected
   // output. If devMode is false, it WILL send messages!
-  public static final boolean devMode = true; 
+  private static final boolean devMode = true; 
   
-  public static final String ACCOUNT_SID = 
+  private static final String ACCOUNT_SID = 
 		  ""; // Put your Twilio Account SID here
-  public static final String AUTH_TOKEN = 
+  private static final String AUTH_TOKEN = 
 		  ""; // Put your Twilio Auth Token Here
 
   /**
