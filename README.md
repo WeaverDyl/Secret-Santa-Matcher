@@ -17,20 +17,20 @@ This program loads data using a config.json file, which is expected to be found 
   "participants": [
     {
       "name": "NAME GOES HERE",
-      "number": "+X PHONE-NUMBER",
+      "number": "+X PHONE-NUMBER"
     },
     {
       "name": "",
-      "number": "",
+      "number": ""
     },
     {
       "name": "",
-      "number": "",
+      "number": ""
     },
     {
       "name": "",
-      "number": "",
-    },
+      "number": ""
+    }
   ]
 }
 ```

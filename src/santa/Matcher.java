@@ -64,6 +64,8 @@ public class Matcher {
 				if (!checkPairDuplicates(copyPairsTo)) {
 					pairsAreValid = false;
 					iterations++;
+					
+					break; // Break from the loop, to check do/while conditions
 				}
 			}
 			
