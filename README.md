@@ -55,7 +55,7 @@ Because I wanted to make it.
 ## Upcoming features
 1. Further optimizations
 2. Moving from lists to sets because I was dumb and realized it too late
-3. The ability to resend an individual messasge that was not properly sent
+3. The ability to resend an individual message that was not properly sent
 
 ## LICENSE
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
