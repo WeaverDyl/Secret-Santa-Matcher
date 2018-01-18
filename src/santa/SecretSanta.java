@@ -18,7 +18,7 @@ public class SecretSanta {
 	
 	public static void main(String[] args) throws ConfigurationException, 
 		ImpossiblePairingException {
-		
+
 		ReadJSON.addParticipants(participantsCopy); // Add the participants
 		Matcher.setPairs(participantsCopy, pairsCopy); // Create the pairs
 		SendMessage.sendText(pairsCopy); // Send the messages

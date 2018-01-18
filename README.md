@@ -6,10 +6,10 @@
 
 Add your Twilio phone number to line 40 of `SendMessage.java` where it says `new PhoneNumber("ADD YOUR TWILIO PHONE NUMBER HERE")`.
 
-#### Dependencies
+#### DEPENDENCIES
 This program uses the [JSON-simple](https://code.google.com/archive/p/json-simple/) toolkit as well as the [Twilio Java API](https://www.twilio.com/docs/libraries/java). Follow the instructions there to get everything running.
 
-#### Configuration File
+#### CONFIGURATION FILE
 This program loads data using a config.json file, which is expected to be found in the root of the project (I have included it with a basic template for how it should be written).
 
 Everybody that is participating needs to have their name and phone number added as shown below. If one or more participants need to NOT be assigned a specific person or group of people, add each of the people to exclude to the person's 'exclusion' list, as shown below.
@@ -42,7 +42,7 @@ Everybody that is participating needs to have their name and phone number added 
 ```
 It is important to note that a country code must be included for each phone number.
 
-#### Environments
+#### ENVIRONMENTS
 There is a developer environment, as well as a 'production' environment. To toggle between them, change `devMode` in `SendMessage.java` and recompile. If `devMode == true`, then running the program will **NOT** send the messages via SMS. The results will instead be printed to the console or command line. If `devMode == false`, then the program will act as if it's in 'production' mode. This means that SMS messages **WILL** be sent when the program is run.
 
 ## WHAT THIS IS
@@ -52,7 +52,7 @@ This is a simple program to put a twist on [secret santa](https://en.wikipedia.o
 ## WHY THIS EXISTS
 Because I wanted to make it.
 
-## Upcoming features
+## UPCOMING FEATURES
 1. Further optimizations
 2. Moving from lists to sets because I was dumb and realized it too late
 3. The ability to resend an individual message that was not properly sent
