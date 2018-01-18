@@ -86,7 +86,7 @@ public class Matcher {
 	 * @param participant An arraylist of UNSHUFFLED participants
 	 * @return An arraylist of SHUFFLED participants
 	 */
-	public static ArrayList<Participant> 
+	private static ArrayList<Participant> 
 		shuffleParticipants(ArrayList<Participant> participant) {
 		
 		@SuppressWarnings("unchecked")
@@ -109,7 +109,7 @@ public class Matcher {
 	 * @param pairs The current list of santa/recipient pairings
 	 * @return True if no duplicates, false if duplicates exist.
 	 */
-	public static boolean checkPairDuplicates(ArrayList<Pair> pairs) {
+	private static boolean checkPairDuplicates(ArrayList<Pair> pairs) {
 		boolean noDuplicates = true; // True: no duplicates, false: duplicates
 
 		for (Pair p : pairs) {
@@ -132,7 +132,7 @@ public class Matcher {
 	 * @return True if there is more than one element with 2+ occurrences,
 	 * 		   false otherwise.
 	 */
-	public static boolean checkPhysicalDuplicates
+	private static boolean checkPhysicalDuplicates
 		(ArrayList<Participant> participants) {
 		
 		boolean noDuplicates = true; // True: no duplicates, false: duplicates
@@ -161,7 +161,7 @@ public class Matcher {
 	 * @param pairs The current pairing of santas/recipients
 	 * @return true if no participant received somebody on their exclusion list
 	 */
-	public static boolean checkExclusionSatisfied(ArrayList<Pair> pairs) {
+	private static boolean checkExclusionSatisfied(ArrayList<Pair> pairs) {
 		boolean satisfied = true;
 		
 		// Check that the santa didn't get somebody on their exclusion list

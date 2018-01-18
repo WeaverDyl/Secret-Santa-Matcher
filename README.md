@@ -43,7 +43,7 @@ Everybody that is participating needs to have their name and phone number added 
 It is important to note that a country code must be included for each phone number.
 
 #### Environments
-There is a developer environment, as well as a 'production' environment. To toggle between them, change `devMode` in SendMessage.java and recompile. If `devMode == true`, then running the program will **NOT** send the messages via SMS. The results will instead be printed to the console or command line. If `devMode == false`, then the program will act as if it's in 'production' mode. This means that SMS messages **WILL** be sent when the program is run.
+There is a developer environment, as well as a 'production' environment. To toggle between them, change `devMode` in `SendMessage.java` and recompile. If `devMode == true`, then running the program will **NOT** send the messages via SMS. The results will instead be printed to the console or command line. If `devMode == false`, then the program will act as if it's in 'production' mode. This means that SMS messages **WILL** be sent when the program is run.
 
 ## WHAT THIS IS
 This is a simple program to put a twist on [secret santa](https://en.wikipedia.org/wiki/Secret_Santa). Instead of drawing names from a hat or something similar, you input the names and phone numbers of each participant into a JSON file, run the program, and each participant will receive a test message telling them who to buy a gift for.
