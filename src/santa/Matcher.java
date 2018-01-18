@@ -42,6 +42,8 @@ public class Matcher {
 		int iterations = 0; // The current number of pairing iterations.
 						    // lower = better.
 		
+		// Check if the same name and number are entered multiple times
+		// in config.json
 		if (!checkPhysicalDuplicates(participants)) {
 			throw new ImpossiblePairingException("There appears to be "
 					+ "duplicate elements in your config.json file. "
@@ -59,6 +61,7 @@ public class Matcher {
 			for (int i = 0; i < listLength; i++) {
 				Pair pair = new Pair(participants.get(i), 
 						shuffledParticipants.get(i)); // Assign the pair
+				
 				copyPairsTo.add(pair); // Add to list of pairs
 			}
 			
@@ -66,14 +69,15 @@ public class Matcher {
 			if (!checkPairDuplicates(copyPairsTo) 
 					|| !checkExclusionSatisfied(copyPairsTo)) {
 				
-				pairsAreValid = false;
+				pairsAreValid = false; // Duplicate exist/exclusions not met
 				iterations++;
 			}
 			
 			// If the pairs contained a duplicate, redo the pairing.
 		} while (!pairsAreValid && iterations < 1000);
 		
-		// If we've tried 1000 times, just assume it's impossible. 
+		// TODO find a better way to do this.
+		// If we've tried 1000 times, just assume it's impossible (for now). 
 		if (iterations == 1000) {
 			throw new ImpossiblePairingException("Something is probably wrong "
 					+ "with your setup, as no pairing can be made.");
