@@ -55,18 +55,19 @@ public class Matcher {
 			 // Shuffle the list and assign it to shuffledParticipants
 			shuffledParticipants = shuffleParticipants(participants);
 			
+			// A loop to actually create the pairings.
 			for (int i = 0; i < listLength; i++) {
 				Pair pair = new Pair(participants.get(i), 
 						shuffledParticipants.get(i)); // Assign the pair
 				copyPairsTo.add(pair); // Add to list of pairs
+			}
+			
+			// Check for duplicates. If they exist, redo the pairing.
+			if (!checkPairDuplicates(copyPairsTo) 
+					|| !checkExclusionSatisfied(copyPairsTo)) {
 				
-				// Check for duplicates. If they exist, redo the pairing.
-				if (!checkPairDuplicates(copyPairsTo)) {
-					pairsAreValid = false;
-					iterations++;
-					
-					break; // Break from the loop, to check do/while conditions
-				}
+				pairsAreValid = false;
+				iterations++;
 			}
 			
 			// If the pairs contained a duplicate, redo the pairing.
@@ -113,9 +114,6 @@ public class Matcher {
 
 		for (Pair p : pairs) {
 			if (p.getSanta().equals(p.getRecipient())) {
-				System.out.println("duplicate detected! " + "santa: " 
-						+ p.getSantaName() + " recipient: " 
-						+ p.getRecipientName());
 				noDuplicates = false; // Return that duplicates WERE found.
 			}
 		}
@@ -153,5 +151,28 @@ public class Matcher {
 		}
 		
 		return noDuplicates;
+	}
+	
+	/**
+	 * Checks if a valid pairing was created, taking into account
+	 * the exclusion lists that somebody may have set up to guarentee
+	 * that they don't get a certain person/people
+	 * 
+	 * @param pairs The current pairing of santas/recipients
+	 * @return true if no participant received somebody on their exclusion list
+	 */
+	public static boolean checkExclusionSatisfied(ArrayList<Pair> pairs) {
+		boolean satisfied = true;
+		
+		// Check that the santa didn't get somebody on their exclusion list
+		for (Pair p : pairs) {
+			// If the santa received somebody on their exclusion list, the
+			// pairing is invalid.
+			if (p.getSanta().getExclusion().contains(p.getRecipientName())) {
+				satisfied = false;
+			}
+		}
+		
+		return satisfied;
 	}
 }

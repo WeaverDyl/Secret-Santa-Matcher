@@ -1,5 +1,7 @@
 package santa;
 
+import java.util.List;
+
 /**
  * Represents a single participant, who has a name and a phone number.
  * 
@@ -9,10 +11,12 @@ package santa;
 public class Participant {
 	private String name;
 	private String phoneNumber;
+	private List<String> exclusions;
 	
-	public Participant(String name, String phoneNumber) {
+	public Participant(String name, String phoneNumber, List<String> exclusions) {
 		this.name = name;
 		this.phoneNumber = phoneNumber;
+		this.exclusions = exclusions;
 	}
 	
 	public String getName() {
@@ -21,6 +25,9 @@ public class Participant {
 	
 	public String getNumber() {
 		return phoneNumber;
+	}
+	public List<String> getExclusion() {
+		return exclusions;
 	}
 	
 	@Override

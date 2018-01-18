@@ -10,26 +10,32 @@ Add your Twilio phone number to line 40 of `SendMessage.java` where it says `new
 This program uses the [JSON-simple](https://code.google.com/archive/p/json-simple/) toolkit as well as the [Twilio Java API](https://www.twilio.com/docs/libraries/java). Follow the instructions there to get everything running.
 
 #### Configuration File
-This program loads data using a config.json file, which is expected to be found in the root of the project (I have included it with a basic template for how it should be written). I will also explain it further here.
+This program loads data using a config.json file, which is expected to be found in the root of the project (I have included it with a basic template for how it should be written).
+
+Everybody that is participating needs to have their name and phone number added as shown below. If one or more participants need to NOT be assigned a specific person or group of people, add each of the people to exclude to the person's 'exclusion' list, as shown below.
 
 ```js
 {
   "participants": [
     {
       "name": "NAME GOES HERE",
-      "number": "+X PHONE-NUMBER"
+      "number": "+X PHONE NUMBER",
+      "exclusion": ["Person 1 to exclude", "Person 2 to exclude"]
     },
     {
       "name": "",
-      "number": ""
+      "number": "",
+      "exclusion": []
     },
     {
       "name": "",
-      "number": ""
+      "number": "",
+      "exclusion": []
     },
     {
       "name": "",
-      "number": ""
+      "number": "",
+      "exclusion": []
     }
   ]
 }

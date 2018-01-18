@@ -38,8 +38,12 @@ public class ReadJSON {
 			
 			// Go through each array element in the JSON file and add each 
 			// participant.
-			for (int i = 0; i < participantArray.size(); i++) {
+			for (int i = 0; i < participantArray.size(); i++) {	
+				// The current participant
 				JSONObject element = (JSONObject) participantArray.get(i);
+				// The current participants exclusion list
+				JSONArray jsonExclusion = (JSONArray) element.get("exclusion");
+				
 				// Test that both a name and number exist for each element
 				if (element.get("name") == null || 
 						element.get("number") == null) {
@@ -48,10 +52,16 @@ public class ReadJSON {
 							+ "is a 'name' and 'number' field for each "
 							+ "participant.");
 				}
+			
+				// Create the exclusion list for the participant
+				ArrayList<String> exclusionList = new ArrayList<>();
+				for (int j = 0; j < jsonExclusion.size(); j++) {
+					exclusionList.add(jsonExclusion.get(j).toString());
+				}
 				
 				// Create the participant, add it to the list that was passed in
 				Participant p = new Participant(element.get("name").toString(),
-						element.get("number").toString());
+						element.get("number").toString(), exclusionList);
 				copyParticipantsTo.add(p);
 			}
 		}

@@ -2,19 +2,23 @@
   "participants": [
     {
       "name": "",
-      "number": ""
+      "number": "",
+      "exclusion": [""]
     },
     {
       "name": "",
-      "number": ""
+      "number": "",
+      "exclusion": []
     },
     {
       "name": "",
-      "number": ""
+      "number": "",
+      "exclusion": []
     },
     {
       "name": "",
-      "number": ""
+      "number": "",
+      "exclusion": [""]
     }
   ]
 }
